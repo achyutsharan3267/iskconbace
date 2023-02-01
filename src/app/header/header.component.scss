@@ -1,0 +1,98 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.logo {
+  img {
+    width: 130px;
+  }
+}
+
+.navbar {
+  padding: 0 30px;
+  background: linear-gradient(90deg, #096b70 0%, #143952 100%);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  //   background-image: url(..//..//../assets/img/icons8-menu-rounded-30.png);
+  opacity: 0.8;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+.nav-item.active {
+  color: #c9a470;
+  font-weight: 500;
+}
+.nav-item {
+  margin-right: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  padding: 30px;
+  &:hover {
+    color: #c9a470;
+    .list {
+      display: block;
+    }
+  }
+  svg {
+    margin-left: 10px;
+  }
+}
+.list {
+  list-style: none;
+  padding: 10px 0;
+  background: #ffffff;
+  width: 300px;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: none;
+
+  .list_item {
+    a {
+      text-decoration: none;
+      padding: 10px 15px;
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 500;
+      display: block;
+      color: #7e8446;
+      &:hover {
+        color: #c9a470;
+        background: linear-gradient(90deg, #096b70 0%, #143952 100%);
+      }
+    }
+  }
+}
+.visit-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #c9a470;
+  padding: 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.visit-btn:hover,
+.visit-btn:active {
+  background: #c9a470;
+  color: #096b70;
+}
+
+@media screen and (min-width: 768px) {
+}

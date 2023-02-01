@@ -1,0 +1,56 @@
+.container {
+  max-width: 1140px !important;
+  width: 100%;
+}
+.main_headding {
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 42px;
+  color: #7e8446;
+}
+.welcom_to_bace {
+  margin-bottom: 50px;
+}
+.about_bace_img {
+  flex: 0 0 50%;
+}
+.about_bace_img img {
+  filter: drop-shadow(10px 9px 10px rgba(0, 0, 0, 0.5));
+  border-radius: 50px 0px;
+  width: 100%;
+}
+.about_bace_text {
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main_headding {
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 42px;
+    color: #7e8446;
+  }
+  .welcom_to_bace {
+    margin-bottom: 100px;
+  }
+
+  .about_bace_text {
+    margin-left: 60px;
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 24px;
+    }
+  }
+}

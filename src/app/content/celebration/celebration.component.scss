@@ -1,0 +1,49 @@
+.container {
+  max-width: 1140px !important;
+  width: 100%;
+}
+.celebration {
+  background: url(..//..//..//assets/img/celebrationback.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px 0;
+}
+.celebration_section {
+  padding: 0;
+  text-align: center;
+  h2 {
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #ffda6b;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .celebration_section {
+    padding: 0 200px;
+    h2 {
+      font-family: "Noto Serif Georgian", serif;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 25px;
+      margin-bottom: 30px;
+    }
+  }
+}

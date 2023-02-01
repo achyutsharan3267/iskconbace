@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+body {
+  background: url(../src/assets/img/background.svg);
+  font-family: "Roboto", sans-serif;
+}
+.read_more_btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
+  padding: 15px 23px;
+  background: #ffda6b;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #3a4f66;
+  border-radius: 15px 0px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  &:hover {
+    border-radius: 0 15px;
+    color: #fff;
+    background-color: #c9a470;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  svg {
+    vertical-align: baseline;
+  }
+}

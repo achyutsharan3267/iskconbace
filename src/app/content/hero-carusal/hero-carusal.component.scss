@@ -1,0 +1,43 @@
+.banner {
+  max-height: 800px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.contianer-fluid {
+  max-width: 1290px !important;
+  width: 100%;
+}
+.banner {
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-wapper {
+    flex-direction: row;
+    img {
+      width: 300px;
+    }
+    p {
+      font-size: 25px;
+      line-height: 30px;
+      font-weight: 600;
+      padding: 10px 0px 10px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner-wapper {
+    flex-direction: row;
+    margin-bottom: 50px;
+    img {
+      width: 500px;
+    }
+    p {
+      font-size: 45px;
+      line-height: 50px;
+      padding: 50px 0 0 50px;
+    }
+  }
+}
