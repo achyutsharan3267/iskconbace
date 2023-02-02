@@ -1,22 +1,12 @@
 .banner {
-  max-height: 800px;
-  height: 800px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: url(..//..//..//assets/img/iskconradheKrishnaw.jpg) center
-    no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   position: relative;
 }
-.banner::before {
-  content: "";
+.overlay {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
 }
 .contianer-fluid {
   max-width: 1290px !important;

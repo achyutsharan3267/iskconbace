@@ -7,6 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   padding: 50px 0;
+  margin-bottom: 50px;
 }
 .celebration_section {
   padding: 0;
@@ -30,6 +31,9 @@
   }
 }
 @media screen and (min-width: 992px) {
+  .celebration {
+    margin-bottom: 100px;
+  }
   .celebration_section {
     padding: 0 200px;
     h2 {
