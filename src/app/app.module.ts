@@ -8,7 +8,7 @@ import { AboutBaceComponent } from './content/about-bace/about-bace.component';
 import { ActivitiesComponent } from './content/activities/activities.component';
 import { CelebrationComponent } from './content/celebration/celebration.component';
 import { HeroCarusalComponent } from './content/hero-carusal/hero-carusal.component';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +16,10 @@ import { HeroCarusalComponent } from './content/hero-carusal/hero-carusal.compon
     AboutBaceComponent,
     ActivitiesComponent,
     CelebrationComponent,
-    HeroCarusalComponent
+    HeroCarusalComponent,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, NgbModule, CarouselModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
