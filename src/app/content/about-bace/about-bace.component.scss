@@ -17,11 +17,19 @@
 .about_bace_img {
   flex: 0 0 50%;
 }
-.about_bace_img img {
-  filter: drop-shadow(10px 9px 10px rgba(0, 0, 0, 0.5));
-  border-radius: 50px 0px;
-  width: 100%;
+.about_bace_img {
+  position: relative;
+  figure {
+    margin: 0;
+  }
+  img {
+    filter: drop-shadow(10px 9px 10px rgba(0, 0, 0, 0.5));
+    border-radius: 50px 0px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
+
 .about_bace_text {
   p {
     font-family: "Roboto", sans-serif;
@@ -30,6 +38,27 @@
     line-height: 20px;
     margin-bottom: 20px;
     text-align: justify;
+  }
+}
+.parbhupad_name {
+  width: 100%;
+  padding: 15px 0;
+  h6 {
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 0;
+    color: #7e8446;
+  }
+  strong {
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(126, 132, 70, 0.7);
   }
 }
 @media screen and (min-width: 992px) {
@@ -53,6 +82,21 @@
       line-height: 22px;
       margin-bottom: 24px;
       text-align: left;
+    }
+  }
+  .about_bace_img img {
+    height: 70vh;
+  }
+  .parbhupad_name {
+    bottom: 50px;
+    padding: 15px 0;
+    h6 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    strong {
+      font-size: 15px;
+      line-height: 20px;
     }
   }
 }
