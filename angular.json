@@ -35,7 +35,6 @@
  "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/custom.js"
             ]
           },
           "configurations": {
