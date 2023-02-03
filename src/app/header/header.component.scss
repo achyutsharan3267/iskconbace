@@ -56,7 +56,7 @@ body {
   top: 75px;
   left: 0;
   display: none;
-
+  z-index: 9;
   .list_item {
     a {
       text-decoration: none;
