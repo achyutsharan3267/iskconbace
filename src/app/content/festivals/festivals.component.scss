@@ -1,0 +1,242 @@
+.festivals {
+  padding: 60px 0;
+  background: rgba(0, 0, 0, 0.5) url(..//..//..//assets/img/bg.png) center
+    no-repeat;
+  //   background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.festivals::before,
+.festivals::after {
+  content: "";
+  left: 0;
+  background-size: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.festivals::before {
+  top: -95px;
+  position: absolute;
+  background: url(..//..//..//assets/img/top.png);
+  height: 100px;
+}
+
+.festivals::after {
+  bottom: -95px;
+  position: absolute;
+  background: url(..//..//..//assets/img/top.png);
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+.head {
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 80px;
+    text-align: center;
+    color: #ffda6b;
+  }
+
+  p {
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+.inviting_mesg {
+  text-align: center;
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    color: #ffda6b;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .read_more_btn {
+    margin: 14px 14px;
+  }
+}
+
+.front,
+.back {
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    color: #414523;
+    font-weight: 800;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-color: #ffda6b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card .profile {
+  border-radius: 10px;
+  transition: 0.2s;
+  max-height: 300px;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.card:hover .profile {
+  transform: scale(1.4);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.card .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .content .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffda6b;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 10px;
+}
+
+.from-left {
+  top: 0;
+  left: -100%;
+}
+
+.card:hover .content .from-left {
+  left: 0%;
+}
+
+.from-bottom {
+  top: 100%;
+  left: 0;
+}
+
+.card:hover .content .from-bottom {
+  top: 0%;
+}
+
+.from-right {
+  top: 0%;
+  right: -100%;
+}
+
+.card:hover .content .from-right {
+  right: 0;
+}
+
+.card .content .back h3 {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.card .content .back .tem-img {
+  border-radius: 100%;
+}
+
+.card .content .back .des {
+  font-size: 13px;
+  padding: 20px 0px;
+}
+
+.card .content .back .social-icon {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card .content .back .social-icon li {
+  display: inline-block;
+}
+
+.card .content .back .social-icon li a {
+  display: block;
+  background: #333;
+  color: #ffda6b;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 100%;
+}
+
+.column {
+  margin-bottom: 20px;
+}
+
+/* Responsive columns */
+@media screen and (min-width: 768px) {
+  .column {
+    margin-bottom: 20px;
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .head {
+    h3 {
+      font-size: 100px;
+      line-height: 117px;
+    }
+
+    p {
+      font-size: 29px;
+      line-height: 39px;
+    }
+  }
+
+  .inviting_mesg {
+    text-align: center;
+
+    p {
+      font-size: 25px;
+      line-height: 38px;
+    }
+
+    .read_more_btn {
+      margin: 0 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .column {
+    margin-bottom: 20px;
+    flex: 0 0 calc(25% - 10px);
+  }
+
+  .inviting_mesg {
+    p {
+      padding: 0 260px;
+    }
+  }
+}

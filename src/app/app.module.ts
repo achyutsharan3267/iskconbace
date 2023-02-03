@@ -9,6 +9,7 @@ import { ActivitiesComponent } from './content/activities/activities.component';
 import { CelebrationComponent } from './content/celebration/celebration.component';
 import { HeroCarusalComponent } from './content/hero-carusal/hero-carusal.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FestivalsComponent } from './content/festivals/festivals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ActivitiesComponent,
     CelebrationComponent,
     HeroCarusalComponent,
+    FestivalsComponent,
   ],
   imports: [BrowserModule, NgbModule, CarouselModule],
   providers: [],
