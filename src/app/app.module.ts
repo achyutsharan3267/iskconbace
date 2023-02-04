@@ -10,6 +10,8 @@ import { CelebrationComponent } from './content/celebration/celebration.componen
 import { HeroCarusalComponent } from './content/hero-carusal/hero-carusal.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FestivalsComponent } from './content/festivals/festivals.component';
+import { FooterComponent } from './footer/footer.component';
+import { AddressComponent } from './content/address/address.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,8 @@ import { FestivalsComponent } from './content/festivals/festivals.component';
     CelebrationComponent,
     HeroCarusalComponent,
     FestivalsComponent,
+    FooterComponent,
+    AddressComponent,
   ],
   imports: [BrowserModule, NgbModule, CarouselModule],
   providers: [],
