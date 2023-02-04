@@ -13,8 +13,12 @@ import { FestivalsComponent } from './content/festivals/festivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddressComponent } from './content/address/address.component';
 import { Router, RouterModule, Routes } from '@angular/router';
+import { AboutIskconComponent } from './information/about-iskcon/about-iskcon.component';
 
-const routes: Routes = [{ path: '', component: HeroCarusalComponent }];
+const routes: Routes = [
+  { path: '', component: HeroCarusalComponent },
+  { path: 'AboutIskcon', component: AboutIskconComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +30,7 @@ const routes: Routes = [{ path: '', component: HeroCarusalComponent }];
     FestivalsComponent,
     FooterComponent,
     AddressComponent,
+    AboutIskconComponent,
   ],
   imports: [
     BrowserModule,
