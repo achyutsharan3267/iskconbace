@@ -12,6 +12,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FestivalsComponent } from './content/festivals/festivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddressComponent } from './content/address/address.component';
+import { Router, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [{ path: '', component: HeroCarusalComponent }];
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,13 @@ import { AddressComponent } from './content/address/address.component';
     FooterComponent,
     AddressComponent,
   ],
-  imports: [BrowserModule, NgbModule, CarouselModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    CarouselModule,
+    RouterModule.forRoot(routes),
+  ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
