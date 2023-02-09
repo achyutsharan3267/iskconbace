@@ -28,6 +28,7 @@ body {
   color: #c9a470;
   font-weight: 500;
 }
+
 .nav-item {
   margin-right: 24px;
   font-size: 14px;
@@ -39,9 +40,6 @@ body {
   padding: 30px;
   &:hover {
     color: #c9a470;
-    .list {
-      display: block;
-    }
   }
   svg {
     margin-left: 10px;
@@ -94,5 +92,10 @@ body {
   color: #096b70;
 }
 
+.nav-item.nav-item.active {
+  .list {
+    display: block;
+  }
+}
 @media screen and (min-width: 768px) {
 }
