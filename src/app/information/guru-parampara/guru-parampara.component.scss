@@ -1,0 +1,62 @@
+.content {
+  width: 60vw;
+  height: 100vh;
+  margin-left: 20%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  height: 100%;
+  color: black;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 2vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: -40px; // cross-browser hack to hide scrollbar
+}
+
+.poem {
+  position: relative;
+  overflow-x: visible;
+  white-space: nowrap;
+  padding-top: 40vh;
+  padding-bottom: 60vh;
+}
+
+.signature {
+  width: 25vw;
+  float: right;
+  margin-right: 40px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  // webkit browsers only
+  .scroll-container {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 5%,
+      black,
+      transparent 95%
+    );
+  }
+}
+
+@-moz-document url-prefix() {
+  // gecko browsers only
+  .scroll-container {
+    mask: url(#geckoMask);
+  }
+}
+
+// html {
+//   height: 100%;
+//   background-color: black;
+// }
+
+// body {
+//   margin: 0;
+//   height: 100%;
+//   overflow: hidden;
+//   background-size: cover;
+//   background-image: url("https://pin.it/69glUKr");
+// }
