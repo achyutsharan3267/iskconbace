@@ -17,12 +17,14 @@ import { AboutIskconComponent } from './information/about-iskcon/about-iskcon.co
 import { GuruParamparaComponent } from './information/guru-parampara/guru-parampara.component';
 import { AboutParbhupadComponent } from './information/about-parbhupad/about-parbhupad.component';
 import { AboutGopalKrishnaComponent } from './information/about-gopal-krishna/about-gopal-krishna.component';
+import { PrabhupadasDesireComponent } from './information/prabhupadas-desire/prabhupadas-desire.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
   { path: 'AboutIskcon', component: AboutIskconComponent },
   { path: 'AboutParbhupad', component: AboutParbhupadComponent },
   { path: 'AboutGopalKrishna', component: AboutGopalKrishnaComponent },
+  { path: 'PrabhupadasDesire', component: PrabhupadasDesireComponent },
 ];
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ const routes: Routes = [
     GuruParamparaComponent,
     AboutParbhupadComponent,
     AboutGopalKrishnaComponent,
+    PrabhupadasDesireComponent,
   ],
   imports: [
     BrowserModule,

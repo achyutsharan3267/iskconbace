@@ -38,7 +38,7 @@
     font-weight: 800;
     line-height: 80px;
     text-align: center;
-    color: #ffda6b;
+    color: var(--btn-color);
   }
 
   p {
@@ -48,7 +48,7 @@
     line-height: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--white);
   }
 }
 
@@ -61,7 +61,7 @@
     font-weight: 700;
     line-height: 28px;
     text-align: center;
-    color: #ffda6b;
+    color: var(--btn-color);
     padding: 0;
     margin-bottom: 30px;
   }
@@ -87,7 +87,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
   text-align: center;
-  background-color: #ffda6b;
+  background-color: var(--btn-color);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -117,7 +117,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ffda6b;
+  background-color: var(--btn-color);
   transition: 1s;
   display: flex;
   flex-direction: column;
@@ -181,7 +181,7 @@
 .card .content .back .social-icon li a {
   display: block;
   background: #333;
-  color: #ffda6b;
+  color: var(--btn-color);
   width: 40px;
   height: 40px;
   text-align: center;

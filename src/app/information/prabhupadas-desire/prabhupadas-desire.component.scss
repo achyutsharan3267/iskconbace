@@ -1,0 +1,104 @@
+.prabhupadas-desire {
+  padding: 50px 0;
+}
+.quotes {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 42px;
+  color: var(--gradint-1);
+  max-width: 430px;
+  margin: 0 auto;
+  strong {
+    font-size: 55px;
+    line-height: 1;
+    display: block;
+    margin-bottom: -10px;
+  }
+  span {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--black);
+  }
+}
+.mb {
+  margin-bottom: 20px;
+}
+.carousal-wapper {
+  flex: 0 0 calc(50% - 20px);
+  overflow: hidden;
+  margin-left: 20px;
+}
+.desire-img {
+  flex: 0 0 calc(30% - 20px);
+  margin-right: 0;
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+.about-desire {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 25px;
+  color: var(--gradint-1);
+  text-align: justify;
+  font-family: "Kalam", cursive;
+}
+.more_quotes-slids {
+  h5 {
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 28px;
+
+    color: var(--white);
+  }
+  //   max-width: 430px;
+  margin: 0 auto;
+  strong {
+    font-size: 55px;
+    line-height: 1;
+    display: block;
+    margin-bottom: -10px;
+    color: var(--white);
+  }
+  span {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--white);
+  }
+}
+.more-quotes-wapper {
+  background: linear-gradient(90deg, var(--gradint-1) 20%, #143952 100%);
+  padding: 20px 0;
+}
+.headding {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 47px;
+  color: var(--head);
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .headding {
+    padding: 0 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .desire-img {
+    margin-right: 20px;
+  }
+  .headding {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 47px;
+    color: var(--head);
+    text-align: center;
+    padding: 0;
+  }
+}

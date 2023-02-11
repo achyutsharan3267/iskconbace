@@ -8,11 +8,21 @@ body {
   background: url(../src/assets/img/background.svg);
   font-family: "Roboto", sans-serif;
 }
+:root {
+  --gradint-1: #096b70;
+  --gradint-2: #143952;
+  --btn-hover: #c9a470;
+  --btn-color: #ffda6b;
+  --text: #3a4f66;
+  --head: #7e8446;
+  --white: #fff;
+  --black: #000;
+}
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #ffda6b #ffda6b;
+  scrollbar-color: var(--btn-color) var(--btn-color);
 }
 
 /* Chrome, Edge, and Safari */
@@ -20,12 +30,12 @@ body {
   width: 5px;
 }
 
-*::-webkit-scrollbar-track {
-  background: #c9a470;
-}
+// *::-webkit-scrollbar-track {
+//   background: var(--btn-hover);
+// }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #ffda6b;
+  background-color: var(--btn-color);
   border-radius: 3px;
   // border: 3px solid #143952;
 }
@@ -38,20 +48,20 @@ body {
   line-height: 19px;
   text-align: center;
   padding: 15px 23px;
-  background: #ffda6b;
+  background: var(--btn-color);
   text-transform: uppercase;
   text-decoration: none;
-  color: #3a4f66;
+  color: var(--text);
   border-radius: 15px 0px;
   transition: all 0.5s ease;
   display: inline-block;
   &:hover {
     border-radius: 0 15px;
-    color: #fff;
-    background-color: #c9a470;
+    color: var(--white);
+    background-color: var(--btn-hover);
     svg {
       path {
-        fill: #fff;
+        fill: var(--white);
       }
     }
   }
@@ -65,13 +75,16 @@ body {
   padding: 10px 12px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  color: #ffda6b;
+  color: var(--btn-color);
   &:hover {
-    color: #fff;
-    background-color: #c9a470;
+    color: var(--white);
+    background-color: var(--btn-hover);
   }
   &:active {
-    color: #fff;
-    background-color: #c9a470;
+    color: var(--white);
+    background-color: var(--btn-hover);
   }
+}
+.custom-margin {
+  margin-bottom: 50px;
 }

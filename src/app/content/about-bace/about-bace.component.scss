@@ -9,7 +9,7 @@
   line-height: 40px;
   text-align: center;
   margin-bottom: 42px;
-  color: #7e8446;
+  color: var(--head);
 }
 .welcom_to_bace {
   margin-bottom: 50px;
@@ -50,7 +50,7 @@
     line-height: 15px;
     text-align: center;
     margin-bottom: 0;
-    color: #7e8446;
+    color: var(--head);
   }
   strong {
     text-align: center;
@@ -66,13 +66,13 @@
 }
 @media screen and (min-width: 992px) {
   .main_headding {
-    font-family: "Noto Serif Georgian", serif;
+    // font-family: "Noto Serif Georgian", serif;
     font-size: 60px;
     font-weight: 700;
     line-height: 70px;
     text-align: center;
     margin-bottom: 42px;
-    color: #7e8446;
+    color: var(--head);
   }
   .welcom_to_bace {
     margin-bottom: 100px;
