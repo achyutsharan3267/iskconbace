@@ -16,11 +16,13 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { AboutIskconComponent } from './information/about-iskcon/about-iskcon.component';
 import { GuruParamparaComponent } from './information/guru-parampara/guru-parampara.component';
 import { AboutParbhupadComponent } from './information/about-parbhupad/about-parbhupad.component';
+import { AboutGopalKrishnaComponent } from './information/about-gopal-krishna/about-gopal-krishna.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
   { path: 'AboutIskcon', component: AboutIskconComponent },
   { path: 'AboutParbhupad', component: AboutParbhupadComponent },
+  { path: 'AboutGopalKrishna', component: AboutGopalKrishnaComponent },
 ];
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ const routes: Routes = [
     AboutIskconComponent,
     GuruParamparaComponent,
     AboutParbhupadComponent,
+    AboutGopalKrishnaComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+.footer {
+  background: linear-gradient(90deg, #096b70 0%, #143952 100%);
+  padding: 15px 0;
+}
+.logo {
+  text-align: center;
+  a {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  strong {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 16px;
+    color: #fff;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 25px;
+    color: #fff;
+  }
+}
+.copyright {
+  text-align: center;
+  a {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+    padding: 3px 10px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  strong {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 14px;
+    color: #fff;
+  }
+}
