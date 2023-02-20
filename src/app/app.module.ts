@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'AboutParbhupad', component: AboutParbhupadComponent },
   { path: 'AboutGopalKrishna', component: AboutGopalKrishnaComponent },
   { path: 'PrabhupadasDesire', component: PrabhupadasDesireComponent },
+  { path: 'GuruParampara', component: GuruParamparaComponent },
 ];
 @NgModule({
   declarations: [
