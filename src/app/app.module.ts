@@ -18,6 +18,7 @@ import { GuruParamparaComponent } from './information/guru-parampara/guru-paramp
 import { AboutParbhupadComponent } from './information/about-parbhupad/about-parbhupad.component';
 import { AboutGopalKrishnaComponent } from './information/about-gopal-krishna/about-gopal-krishna.component';
 import { PrabhupadasDesireComponent } from './information/prabhupadas-desire/prabhupadas-desire.component';
+import { TempleOfVrindavanComponent } from './VrindavanDarshan/temple-of-vrindavan/temple-of-vrindavan.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'AboutGopalKrishna', component: AboutGopalKrishnaComponent },
   { path: 'PrabhupadasDesire', component: PrabhupadasDesireComponent },
   { path: 'GuruParampara', component: GuruParamparaComponent },
+  { path: 'TempleOfVrindavan', component: TempleOfVrindavanComponent },
 ];
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ const routes: Routes = [
     AboutParbhupadComponent,
     AboutGopalKrishnaComponent,
     PrabhupadasDesireComponent,
+    TempleOfVrindavanComponent,
   ],
   imports: [
     BrowserModule,
