@@ -1,0 +1,42 @@
+.yamuna_arti {
+  padding-top: 50px;
+}
+
+h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  color: var(--gradint-1);
+  margin-bottom: 50px;
+}
+
+.yamuna_img {
+  flex: 0 0 calc(30% - 20px);
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.yamuna-text {
+  flex: 0 0 calc(70% - 20px);
+  text-align: justify;
+  h4 {
+    display: inline-block;
+    border-bottom: 2px solid;
+    padding: 0 10px 5px 0;
+    font-size: 25px;
+    line-height: 30px;
+    color: var(--gradint-1);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .yamuna_img {
+    margin-bottom: 0;
+  }
+}
