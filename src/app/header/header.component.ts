@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 declare function myFunction(): any;
+declare function TwakTo(): any;
 declare function nav(): any;
 @Component({
   selector: 'app-header',
@@ -9,5 +10,6 @@ declare function nav(): any;
 export class HeaderComponent {
   ngOnInit(): void {
     myFunction();
+    TwakTo();
   }
 }
