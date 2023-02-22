@@ -5,8 +5,9 @@
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss";
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss";
 body {
-  background: url(../src/assets/img/background.svg);
+  background: url(../src/assets/img/background.png) top left no-repeat;
   font-family: "Roboto", sans-serif;
+  background-size: cover;
 }
 :root {
   --gradint-1: #096b70;
@@ -17,6 +18,7 @@ body {
   --head: #7e8446;
   --white: #fff;
   --black: #000;
+  --custom: #c3bfbf;
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -38,6 +40,16 @@ body {
   background-color: var(--btn-color);
   border-radius: 3px;
   // border: 3px solid #143952;
+}
+p {
+  color: var(--custom);
+}
+span {
+  color: var(--btn-hover);
+}
+
+strong {
+  color: var(--btn-color);
 }
 .container {
   padding: 0 30px;

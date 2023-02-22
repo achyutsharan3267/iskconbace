@@ -1,5 +1,9 @@
 .footer {
-  background: linear-gradient(90deg, var(--gradint-1) 20%, #143952 100%);
+  background: linear-gradient(
+    90deg,
+    var(--gradint-1) 20%,
+    var(--gradint-2) 100%
+  );
   padding: 15px 0;
 }
 .logo {
