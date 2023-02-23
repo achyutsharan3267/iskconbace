@@ -122,6 +122,10 @@ body.dark {
   p {
     color: var(--black);
   }
+
+  .label {
+    border: 2px solid #a8a8a8;
+  }
 }
 .checkbox {
   opacity: 0;
@@ -164,7 +168,7 @@ body.dark {
 }
 
 .fa-sun {
-  color: yellow;
+  color: #f4d344;
   font-size: 13px;
 }
 
