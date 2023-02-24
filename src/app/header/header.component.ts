@@ -3,6 +3,7 @@ declare function myFunction(): any;
 declare function TwakTo(): any;
 declare function nav(): any;
 declare function dark(): any;
+declare function animation(): any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,5 +14,6 @@ export class HeaderComponent {
     myFunction();
     TwakTo();
     dark();
+    animation();
   }
 }

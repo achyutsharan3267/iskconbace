@@ -45,3 +45,11 @@ checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark');
 })
 }
+
+function animation(){
+    AOS.init(
+        {duration: 1000,
+            offset: 250
+        }
+    );
+}
