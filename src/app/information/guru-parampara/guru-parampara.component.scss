@@ -1,62 +1,311 @@
-.content {
-  width: 60vw;
-  height: 100vh;
-  margin-left: 20%;
-  overflow: hidden;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.scroll-container {
-  height: 100%;
-  color: black;
-  font-family: "Aref Ruqaa", serif;
-  font-size: 2vw;
-  overflow-y: scroll;
+$BG-color: #ad1457; /* dark pink for the bg-color */
+$box-color: #00838f; /*dark cayn for the boxes */
+$font-color: #f8bbd0; /* light pink  for the words*/
+
+body {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  background: $BG-color;
+  color: $font-color;
   overflow-x: hidden;
-  margin-right: -40px; // cross-browser hack to hide scrollbar
+  padding-bottom: 50px;
 }
 
-.poem {
+/* INTRO SECTION
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul {
   position: relative;
-  overflow-x: visible;
-  white-space: nowrap;
-  padding-top: 40vh;
-  padding-bottom: 60vh;
+}
+.timeline ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18px 26px 18px 26px;
+  border-color: $box-color transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.signature {
-  width: 25vw;
-  float: right;
-  margin-right: 40px;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  // webkit browsers only
-  .scroll-container {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      transparent 5%,
-      black,
-      transparent 95%
-    );
+.intro {
+  // background: $BG-color;
+  padding: 50px 0 0 0;
+  h1 {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: $box-color;
+    margin-bottom: 15px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 25px;
+    color: red;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 10px;
   }
 }
 
-@-moz-document url-prefix() {
-  // gecko browsers only
-  .scroll-container {
-    mask: url(#geckoMask);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+  // background: $BG-color;
+  padding: 50px 0;
+}
+.timeline ul li {
+  position: relative;
+}
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 10px;
+  margin-left: 20px;
+  padding-top: 50px;
+  background: $box-color;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div.card {
+  position: relative;
+  bottom: 0;
+  width: 250px;
+  padding: 15px;
+  height: 350px;
+  background: $box-color;
+  border-radius: 20px;
+  // overflow: hidden;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  strong {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
-// html {
-//   height: 100%;
-//   background-color: black;
+.timeline ul li .card::before {
+  content: "";
+  position: absolute;
+  bottom: 37px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div.card {
+  left: -160px;
+}
+
+.timeline ul li:nth-child(odd) .card::before {
+  left: -15px;
+  border-width: 18px 26px 18px 0;
+  border-color: transparent $box-color transparent transparent;
+}
+
+.timeline ul li:nth-child(even) .card::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent $box-color transparent transparent;
+}
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: $box-color;
+}
+
+.timeline ul li div.card {
+  // visibility: hidden;
+  // opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div.card {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div.card {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div.card {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hooover {
+  position: absolute;
+  background: rgba(16, 75, 93, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  opacity: 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h5 {
+    font-size: 40px;
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  p {
+    display: -webkit-box;
+    max-width: 100%;
+    max-height: 240px;
+    margin: 0 auto;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  a {
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: orange;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.timeline ul li div.card:hover .hooover {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-child(even) div.card {
+  left: 240px;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (min-width: 767px) {
+  // .timeline ul li {
+  //   margin-left: 20px;
+  // }
+  .timeline ul li {
+    // width: calc(100vw - 91px);
+    margin: 0 auto;
+  }
+  .timeline ul li:nth-child(even) div.card {
+    left: -80px;
+    /*250+45-6*/
+  }
+  .timeline ul li:nth-child(even) .card::before {
+    left: unset;
+    right: -15px;
+    border-width: 18px 0 18px 26px;
+    border-color: transparent transparent transparent $box-color;
+  }
+  .intro {
+    h1 {
+      font-size: 45px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .timeline ul li div.card {
+    width: 400px;
+    height: 642px;
+  }
+  .timeline ul li:nth-child(even) div.card {
+    left: -230px;
+  }
+
+  .timeline ul li {
+    margin: 0 auto;
+  }
+  .hooover {
+    p {
+      max-height: 440px;
+      margin: 0 auto;
+      -webkit-line-clamp: 22;
+      -webkit-box-orient: vertical;
+      text-align: justify;
+    }
+  }
+  .intro {
+    h1 {
+      font-size: 65px;
+      line-height: 80px;
+    }
+  }
+}
+/////////////////////////
+// my photo in the snow
+///////////////////////
+// #meBaby {
+//   width: 100px;
+//   height: 135px;
 // }
 
-// body {
-//   margin: 0;
-//   height: 100%;
-//   overflow: hidden;
-//   background-size: cover;
-//   background-image: url("https://pin.it/69glUKr");
+// .photos {
+//   width: 100px;
+//   height: auto;
 // }
+a:visited {
+  color: $font-color;
+}
+a:hover {
+  color: #ad1457;
+}

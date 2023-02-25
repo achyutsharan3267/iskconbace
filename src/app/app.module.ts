@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'GuruParampara', component: GuruParamparaComponent },
   { path: 'TempleOfVrindavan', component: TempleOfVrindavanComponent },
   { path: 'Yamuna', component: YamunaComponent },
+  { path: 'GuruParampara', component: GuruParamparaComponent },
 ];
 @NgModule({
   declarations: [

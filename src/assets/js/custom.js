@@ -53,3 +53,12 @@ function animation(){
         }
     );
 }
+
+
+function animationparampara(){
+    AOS.init(
+        {duration: 1000,
+            offset: 450
+        }
+    );
+}
