@@ -7,7 +7,9 @@ body {
     width: 130px;
   }
 }
-
+header {
+  height: 75px;
+}
 .navbar {
   padding: 0 30px;
   background: linear-gradient(
@@ -15,6 +17,9 @@ body {
     var(--gradint-1) 0%,
     var(--gradint-2) 100%
   );
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .navbar-toggler {
