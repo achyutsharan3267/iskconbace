@@ -1,54 +1,11 @@
-<!-- <div class="banner">
-  <div class="container-fluid">
-    <div class="overlay"></div>
-    <figure>
-      <img src="..//..//../assets/img/iskconradheKrishnaw.jpg" alt="">
-    </figure>
-  </div>
-</div> -->
 <div class="banner">
 
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
+    <ng-template carouselSlide *ngFor="let item of CarusalData">
       <div class="slide position-relative">
         <div class="overlay">
         </div>
-        <img src="..//..//../assets/img/iskconradheKrishnaw.jpg" alt="">
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="overlay">
-      </div>
-      <div class="slide">
-        <img src="..//..//../assets/img/iskconradheKrishna.jpg" alt="">
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="overlay">
-      </div>
-      <div class="slide">
-        <img src="..//..//../assets/img/image4.jpg" alt="">
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="overlay">
-      </div>
-      <div class="slide">
-        <img src="..//..//../assets/img/image5.jpg" alt="">
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="overlay">
-      </div>
-      <div class="slide">
-        <img src="..//..//../assets/img/image6.jpg" alt="">
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="overlay">
-      </div>
-      <div class="slide">
-        <img src="..//..//../assets/img/image7.jpg" alt="">
+        <img src="{{item}}" alt="">
       </div>
     </ng-template>
   </owl-carousel-o>
