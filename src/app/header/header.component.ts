@@ -18,4 +18,11 @@ export class HeaderComponent {
     animation();
     sks();
   }
+
+  gotoTop() {
+    var scrollToTop = setTimeout(() => {
+      window.scrollTo(0, 0);
+      clearTimeout(scrollToTop);
+    });
+  }
 }
