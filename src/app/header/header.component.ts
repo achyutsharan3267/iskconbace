@@ -4,6 +4,7 @@ declare function TwakTo(): any;
 declare function nav(): any;
 declare function dark(): any;
 declare function animation(): any;
+declare function sks(): any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,5 +16,6 @@ export class HeaderComponent {
     TwakTo();
     dark();
     animation();
+    sks();
   }
 }
