@@ -58,6 +58,7 @@ strong {
 }
 .container {
   padding: 0 30px;
+  overflow: hidden;
 }
 .read_more_btn {
   font-size: 16px;
@@ -126,6 +127,12 @@ body.dark {
   .label {
     border: 2px solid #a8a8a8;
   }
+  .megamenu-panel {
+    background-color: var(--white);
+  }
+  .megamenu-list > li > a {
+    color: var(--black) !important;
+  }
 }
 .checkbox {
   opacity: 0;
@@ -178,6 +185,20 @@ body.dark {
   right: 30px;
   z-index: 9999;
 }
+.nav-menus-wrapper-close-button {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 30px;
+  line-height: 1;
+}
 
+.nav-menu {
+  .visit-btn {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
