@@ -20,6 +20,7 @@ import { AboutGopalKrishnaComponent } from './information/about-gopal-krishna/ab
 import { PrabhupadasDesireComponent } from './information/prabhupadas-desire/prabhupadas-desire.component';
 import { TempleOfVrindavanComponent } from './VrindavanDarshan/temple-of-vrindavan/temple-of-vrindavan.component';
 import { YamunaComponent } from './VrindavanDarshan/yamuna/yamuna.component';
+import { PhotogalleryComponent } from './photogallery/photogallery.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'TempleOfVrindavan', component: TempleOfVrindavanComponent },
   { path: 'Yamuna', component: YamunaComponent },
   { path: 'GuruParampara', component: GuruParamparaComponent },
+  { path: 'Photogallery', component: PhotogalleryComponent },
 ];
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ const routes: Routes = [
     PrabhupadasDesireComponent,
     TempleOfVrindavanComponent,
     YamunaComponent,
+    PhotogalleryComponent,
   ],
   imports: [
     BrowserModule,

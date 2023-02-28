@@ -34,9 +34,56 @@ h5 {
     color: var(--gradint-1);
   }
 }
-
+.more-quotes-wapper {
+  background: linear-gradient(90deg, var(--gradint-1) 20%, #143952 100%);
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  h5 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 2px dashed var(--white);
+  }
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: var(--white);
+    padding: 0;
+  }
+}
 @media screen and (min-width: 767px) {
   .yamuna_img {
     margin-bottom: 0;
+  }
+  .more-quotes-wapper {
+    background: linear-gradient(90deg, var(--gradint-1) 20%, #143952 100%);
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 90px;
+    padding-bottom: 10px;
+    h5 {
+      font-size: 35px;
+      line-height: 35px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .more-quotes-wapper {
+    p {
+      padding: 0 255px;
+    }
   }
 }
