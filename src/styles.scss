@@ -133,6 +133,14 @@ body.dark {
   .megamenu-list > li > a {
     color: var(--black) !important;
   }
+  .more_quotes-slids-desktop {
+    h5 {
+      color: var(--black) !important;
+    }
+    span {
+      color: var(--black) !important;
+    }
+  }
 }
 .checkbox {
   opacity: 0;
