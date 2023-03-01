@@ -26,6 +26,7 @@ h1 {
   margin-top: 8px;
   filter: grayscale(70%);
   width: 100%;
+  transition: all 1s ease;
 }
 .column a img:hover {
   filter: unset;
