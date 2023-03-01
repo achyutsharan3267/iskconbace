@@ -21,18 +21,19 @@ h1 {
   padding: 0 4px;
 }
 
-.column img {
+.column a img {
   vertical-align: middle;
   margin-top: 8px;
   filter: grayscale(70%);
+  width: 100%;
 }
-.column img:hover {
+.column a img:hover {
   filter: unset;
 }
 
 .column:nth-child(even) {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 800px) {
