@@ -21,6 +21,7 @@ import { PrabhupadasDesireComponent } from './information/prabhupadas-desire/pra
 import { TempleOfVrindavanComponent } from './VrindavanDarshan/temple-of-vrindavan/temple-of-vrindavan.component';
 import { YamunaComponent } from './VrindavanDarshan/yamuna/yamuna.component';
 import { PhotogalleryComponent } from './photogallery/photogallery.component';
+import { GovardhanComponent } from './information/govardhan/govardhan.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'Yamuna', component: YamunaComponent },
   { path: 'GuruParampara', component: GuruParamparaComponent },
   { path: 'Photogallery', component: PhotogalleryComponent },
+  { path: 'Govardhan', component: GovardhanComponent },
 ];
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ const routes: Routes = [
     TempleOfVrindavanComponent,
     YamunaComponent,
     PhotogalleryComponent,
+    GovardhanComponent,
   ],
   imports: [
     BrowserModule,

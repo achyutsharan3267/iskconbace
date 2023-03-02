@@ -1,0 +1,111 @@
+.govardhan {
+  padding: 80px 0;
+}
+
+.about-govardhan {
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 108px;
+  .govardhan-img {
+    margin: 0;
+    img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  h5 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--gradint-1);
+    margin-bottom: 22px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 23px;
+    // color: var(--black);
+  }
+}
+
+.govardhan-place {
+  h4 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--gradint-1);
+    margin-bottom: 40px;
+  }
+  .govardhan-place-list {
+    list-style: none;
+  }
+  li {
+    position: relative;
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 19px;
+      color: var(--gradint-1);
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 24px;
+      &::after {
+        content: "";
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        height: 2px;
+        width: 65%;
+        background: #dd9b26;
+      }
+    }
+    &::before {
+      content: "";
+      background: url(..//..//../assets/img/tilak.svg) center no-repeat;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+@media screen and (min-width: 767px) {
+  .about-govardhan {
+    gap: 30px;
+    margin-bottom: 50px;
+    .govardhan-pooja {
+      width: 48%;
+    }
+  }
+  .govardhan-img {
+    img {
+      margin-bottom: 0;
+    }
+  }
+  .govardhan-place {
+    h4 {
+      margin-bottom: 70px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .govardhan-place {
+    width: 51%;
+    margin: 0 auto;
+    li {
+      p {
+        &::after {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
