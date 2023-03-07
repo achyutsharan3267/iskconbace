@@ -1,0 +1,73 @@
+<section class="section gallery">
+  <div class="container">
+    <h1 class="gallery-heading">Photo Gallery</h1>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let item of Gallery">
+        <img src="{{item}}" alt="Lorem Picsum photo 1">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/756/600/400">
+        </div>
+      </div>
+      <!-- 
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1015/300/200" alt="Lorem Picsum photo 2">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/1015/600/400">Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Totam quam suscipit sint aliquam alias expedita ut quidem incidunt vel
+          laudantium!</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1043/300/200" alt="Lorem Picsum photo 3">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/1043/600/400">Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Totam quam suscipit sint aliquam alias expedita ut quidem incidunt vel
+          laudantium!</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/164/300/200" alt="Lorem Picsum photo 4">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/164/600/400">Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Totam quam suscipit sint aliquam alias expedita ut quidem incidunt vel
+          laudantium!</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/385/300/200" alt="Lorem Picsum photo 5">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/385/600/400">Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Totam quam suscipit sint aliquam alias expedita ut quidem incidunt vel
+          laudantium!</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/392/300/200" alt="Lorem Picsum photo 6">
+        <div class="gallery-item-text" data-url="https://picsum.photos/id/392/600/400">Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. A porro nulla deleniti earum velit eligendi culpa provident ex illo!
+          Temporibus, totam obcaecati vel ducimus iusto dolore porro veniam, rerum laudantium dolor ad perspiciatis
+          labore molestiae numquam unde suscipit at aliquid quo mollitia. Accusamus commodi magnam cumque temporibus
+          ipsam minus libero.</div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <svg aria-hidden="true" height="18" version="1.1" viewBox="0 0 16 16" width="18">
+    <path fill-rule="evenodd"
+      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+    </path>
+  </svg>
+  <a href="https://github.com/jrrio/gallery-with-lightbox" aria-label="GitHub" title="Project on GitHub" target="_blank"
+    rel="noopener">Gallery with Lightbox on GitHub</a>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox preload">
+  <div class="lb-content">
+    <!-- You may put a loader gif or svg here for starters -->
+    <img class="lb-img" src="https://res.cloudinary.com/ahmedagadir/image/upload/v1530730083/pokemon-API/loader-1.svg"
+      alt="lightbox image">
+    <div class="lb-caption">
+      <a class="lb-url" href="" rel="noopener" target="_blank">Link to Site &rarr;</a>
+      <div class="lb-text"></div>
+    </div>
+    <a href="#" class="close">&times;</a>
+  </div>
+</div>
