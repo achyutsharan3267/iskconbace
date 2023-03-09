@@ -230,27 +230,27 @@ function sks() {
 function music() {
   var beatpack = [
     {
-      name: "2Stroke",
-      artist: "Bones - Prod. Niq Venus",
-      src: "https://trevor-reznik.github.io/guides/email-template/4.opus",
+      name: "Bhaj_Man_Radhe_Govinda",
+      artist: "Achyut Gopi",
+      src: "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Bhaj_Man_Radhe_Govinda.mp3",
       thumbnail: "url(https://trevor-reznik.github.io/guides/email-template/4.jpg)"
     },
     {
-      name: 'Playboi Carti type beat "Jaded"',
-      artist: "Niq Venus",
-      src: "https://trevor-reznik.github.io/guides/email-template/1.mp3",
+      name: 'Govindam Adi Purusham"',
+      artist: "Brahma_Samhitha",
+      src: "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Brahma_Samhitha_Govindam%20Adi%20Purusham.mp3",
       thumbnail: "url(https://trevor-reznik.github.io/guides/email-template/14.jpg)"
     },
     {
-      name: 'Roddy Ricch type beat "HERO"',
-      artist: "Niq Venus",
-      src: "https://trevor-reznik.github.io/guides/email-template/2.mp3",
+      name: 'Maha_Mantra"',
+      artist: "Candrika",
+      src: "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Candrika_Maha_Mantra.mp3",
       thumbnail: "url(https://trevor-reznik.github.io/guides/email-template/13.jpg)"
     },
     {
-      name: "Reeses Puffs",
-      artist: "Niq Venus",
-      src: "https://trevor-reznik.github.io/guides/email-template/3.mp3",
+      name: "Damodar Ashtakam",
+      artist: "Unknown",
+      src: "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Damodar%20Ashtakam%20with%20Lyrics%20and%20Meaning%20-%20ISKCON%20Temple%20Songs%20_%20Sri%20Damodarashtakam(MP3_128K).mp3",
       thumbnail: "url(https://trevor-reznik.github.io/guides/email-template/15.jpg)"
     }
   ];
