@@ -208,5 +208,21 @@ body.dark {
     width: 90%;
   }
 }
+
+button.track-item {
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: 0.1s;
+  color: orange;
+  white-space: nowrap;
+  display: block;
+  width: 300px;
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.1);
+    color: #0fd5ca;
+  }
+}
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
