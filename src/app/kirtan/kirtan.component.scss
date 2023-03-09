@@ -1,273 +1,189 @@
-/* Mobile-first approach */
-html {
-  height: -webkit-fill-available;
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #0a1124;
-  box-sizing: border-box;
-  color: snow;
-  font: 300 1.1rem/1.65 "Poppins", sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  padding: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-body *,
-body *:before,
-body *:after {
-  box-sizing: inherit;
-}
-img {
-  border: 0;
-  display: block; /* collapse top and bottom margins */
-  max-width: 100%;
-}
-.section {
-  padding: 16px 20px;
-}
-
-.gallery {
-  padding-bottom: 10px;
-  text-align: center;
-}
-.gallery-heading {
-  color: #00d6c8;
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  line-height: 1.15;
-  text-transform: uppercase;
-  margin-top: 0;
+.kirtan {
+  height: 67vh;
   position: relative;
-  padding-bottom: 8px;
 }
-.gallery-heading::after {
-  content: "";
-  background-color: currentColor;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 1px;
+
+.thumbnail {
   width: 100px;
-}
-.gallery-grid {
-  /*   background: #283048; */
-  /*   background: linear-gradient(to right, #355460, #283048); */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: minmax(200px, -webkit-max-content);
-  grid-auto-rows: minmax(200px, max-content);
-  grid-auto-flow: dense;
-  gap: 10px;
-  margin-top: 40px;
-  /*   padding: 10px; */
-}
-
-/* 2020-09-20 - Staggered intro animation adapted from https://youtu.be/705XCEruZFs?t=460 */
-@-webkit-keyframes gallery-items-animation {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-    -webkit-filter: hue-rotate(180deg);
-    filter: hue-rotate(180deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-    -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-}
-@keyframes gallery-items-animation {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-    -webkit-filter: hue-rotate(180deg);
-    filter: hue-rotate(180deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-    -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-}
-
-/* 2020-09-20 */
-.gallery-item {
-  -webkit-animation: gallery-items-animation 800ms ease-out;
-  animation: gallery-items-animation 800ms ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  /* --staggered-delay will be incremented for each item by JS on DOMContentLoaded */
-  --staggered-delay: 100ms;
-  -webkit-animation-delay: var(--staggered-delay);
-  animation-delay: var(--staggered-delay);
-}
-
-.gallery-item img {
-  border: 0;
-  display: block; /* collapse top and bottom margins */
-  cursor: pointer;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  filter: grayscale(0.7);
-}
-
-.gallery-item-text {
-  display: none;
-}
-
-/*******************************
-       .lightbox styles
-*******************************/
-.lightbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s;
-  z-index: 10;
-}
-
-/* .preload will be removed by JS code during DOMContentLoaded event. This is done to avoid lightbox transition appearing on page load. */
-.lightbox.preload {
-  transition: none !important;
-}
-
-.lightbox.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.lightbox .lb-content {
-  background-color: lightgray;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1em;
-  max-height: 90%;
-  padding: 10px;
-  position: relative;
-}
-
-.lightbox .lb-img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  margin-bottom: 0;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.lightbox .lb-caption {
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  max-width: 50ch;
-  overflow-y: auto; /* may occur in smartphones */
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: none;
-}
-
-.lightbox.open .lb-caption {
-  opacity: 1;
-}
-
-.lightbox .lb-url {
-  color: #005fa9;
-  text-decoration: underline;
-  text-underline-position: under;
-  padding-top: 8px;
-  padding-bottom: 14px;
-}
-
-.lightbox .close {
-  background-color: lightgray;
-  cursor: pointer;
-  color: #333;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2em;
-  line-height: 1em;
-  text-align: center;
+  height: 100px;
+  border-radius: 50%;
   position: absolute;
-  top: -0.4em;
-  right: -0.4em;
-  width: 1em;
-  height: 1em;
+  top: 8px;
+  left: 8px;
+  background: url("https://trevor-reznik.github.io/guides/email-template/4.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  user-select: none;
+}
+
+.player .circle {
+  max-width: 120px;
+}
+
+.player .circle .active {
+  text-transform: uppercase;
+  animation-name: example;
+  animation: record 3s linear 0s infinite forwards;
+}
+
+@keyframes record {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.player .circle .circ {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 13%;
+  top: 18%;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.player .player-track {
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px 15px 5px 110px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.player .player-track .active {
+  top: -100px;
+}
+
+.player .player-track .time {
+  font-size: 16px;
+  margin: 5px 0px 20px;
+  height: 6px;
+  color: #b3b3b3;
+  /* secondary text color */
+}
+
+.player .player-track .progress-bar {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 20px;
+}
+
+.player .player-track .progress-bar .fillBar {
+  width: 0;
+  height: 6px;
+  border-radius: 20px;
+}
+
+.player .player-track .artist-name {
+  color: #ffffff;
+  /* primary text color */
+  font-weight: bold;
+  font-size: 1.1em;
+  white-space: nowrap;
+  width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.player .player-track .music-name {
+  color: #b3b3b3;
+  /* secondary text color */
+  font-size: 0.85em;
+  margin-bottom: 20px;
+}
+
+.player .player-control {
+  background-color: #181818;
+  width: 340px;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0.75vh 0.5vw rgba(0, 0, 0, 0.2),
+    0 1.6vh 1.25vw rgba(0, 0, 0, 0.35), 0.02vw -0.1vh rgba(56, 56, 56, 0.514);
+}
+
+.player .player-control #play {
   border-radius: 50%;
 }
 
-/* Lightbox overlay */
-.lightbox .close::before {
-  background-color: rgba(0, 0, 0, 0.9);
-  content: "";
-  cursor: default;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.player .player-control i {
+  padding: 30px 8px;
+  font-size: 35px;
+  cursor: pointer;
+  text-align: center;
 }
 
-/**********************************
-          Media queries
- **********************************/
+.play-btn:before {
+  border-radius: 500px;
+  color: #ffffff;
+  background-color: #1db954;
+  padding: 10px 10px 10px 15px;
+}
 
-/* Medium devices (landscape tablets, 768px and up) */
+.play-btn:hover:before {
+  filter: brightness(1.08) saturate(1.03);
+  box-shadow: 0 1px #222222;
+}
+
+.pause-btn:before {
+  border-radius: 500px;
+  color: #ffffff;
+  background-color: #1db954;
+  padding: 10px 10px 10px 10px;
+}
+
+.pause-btn:hover:before {
+  filter: brightness(1.08);
+  box-shadow: 0 1px #855454b6;
+}
+
+.next-btn:before {
+  color: rgb(179, 179, 179);
+}
+
+.next-btn:hover:before {
+  color: #fff;
+}
+
+.prev-btn:before {
+  color: rgb(179, 179, 179);
+}
+
+.prev-btn:hover:before {
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
-  .lightbox .lb-caption {
-    font-size: 1rem;
-  }
-}
+  .player {
+    .player-control {
+      width: 450px;
+    }
 
-/* Large devices (laptops/desktops, 1024px and up) */
-@media screen and (min-width: 1024px) {
-  .lightbox .lb-content {
-    flex-direction: row;
-  }
+    .player-track {
+      padding: 15px 15px 5px 160px;
+    }
 
-  .lightbox .lb-img {
-    margin-bottom: 0;
+    .thumbnail {
+      width: 145px;
+      height: 145px;
+    }
+    .circle .circ {
+      left: 15%;
+      top: 30%;
+    }
   }
-
-  .lightbox .lb-caption {
-    padding: 0 1.5em;
-  }
-  .lightbox .lb-url {
-    padding-top: 0;
-  }
-}
-.footer {
-  color: snow;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-}
-.footer svg {
-  fill: snow;
-}
-.footer a {
-  color: inherit;
-  margin-left: 10px;
-  text-decoration: underline;
-  text-underline-position: under;
 }
