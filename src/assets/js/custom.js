@@ -228,492 +228,189 @@ function sks() {
 }
 
 function music() {
-  // https://webFardin.github.io
-
-// https://github.com/webFardin
-
-// https://codepen.io/webFardin
-
-// https://t.me/webFardin
-
+  // Designed by: Mauricio Bucardo
+// Original image: https://dribbble.com/shots/6957353-Music-Player-Widget
 "use strict";
-
-let audioTrack = document.createElement("audio");
-audioTrack.preload = "metadata";
-document.body.append(audioTrack);
-
-let blurElement = document.getElementById("blurElement");
-
-let themes = document.getElementById("themes");
-
-let musicBox = document.getElementById("musicBox");
-
-let trackItemsWrapper = document.getElementById("trackItemsWrapper");
-
-let trackArtistName = document.getElementById("trackArtistName");
-let trackAlbumName = document.getElementById("trackAlbumName");
-
-let coverImage = document.getElementById("coverImage");
-
-let playButton = document.getElementById("playButton");
-let playButtonIcon = playButton.firstElementChild;
-let pauseButtonIcon = playButton.lastElementChild;
-
-let previousButton = document.getElementById("previousButton");
-let nextButton = document.getElementById("nextButton");
-
-let volumeWrapper = document.getElementById("volumeWrapper");
-let volumeButton = document.getElementById("volumeButton");
-let volumeNumber = document.getElementById("volumeNumber");
-
-let wavesVolumeButton = document.getElementById("wavesVolumeButton");
-let highVolumeSymbol = document.getElementById("highVolumeSymbol");
-let mediumVolumeSymbol = document.getElementById("mediumVolumeSymbol");
-let lowVolumeSymbol = document.getElementById("lowVolumeSymbol");
-let volumeCross = document.getElementById("volumeCross");
-
-let currentTrackTimeNumber = document.getElementById("currentTrackTimeNumber");
-let currentTrackDuration = document.getElementById("currentTrackDuration");
-
-let trackProgressBar = document.getElementById("trackProgressBar");
-let trackLoading = document.getElementById("trackLoading");
-let currentTrackTimeBar = document.getElementById("currentTrackTimeBar");
-
-let musics = [
-  {
-    trackName: "Bhaj_Man_Radhe_Govinda",
-    artist: "Achyut Gopi",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Bhaj_Man_Radhe_Govinda.mp3"
-  },
-  {
-    trackName: "Govindam Adi Purusham",
-    artist: "Brahma_Samhitha",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Brahma_Samhitha_Govindam%20Adi%20Purusham.mp3"
-  },
-  {
-    trackName: "Maha_Mantra",
-    artist: "Candrika",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Candrika_Maha_Mantra.mp3"
-  },
-  {
-    trackName: "Damodar Ashtakam",
-    artist: "Unknown",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Damodar%20Ashtakam%20with%20Lyrics%20and%20Meaning%20-%20ISKCON%20Temple%20Songs%20_%20Sri%20Damodarashtakam(MP3_128K).mp3"
-  },
-
-  {
-    trackName: "Hare Krishna Hare Rama _Mahamantra",
-    artist: "Unknown",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Hare%20Krishna%20Hare%20Rama%20_%20Mahamantra%20_%20Lofi%20Spiritual%20_%20Slowed%20_%20Reverb(MP3_320K).mp3"
-  },
-  {
-    trackName: "Mahamantra",
-    artist: "Unknown",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Hare%20Krishna%20Mahamantra(MP3_128K).mp3"
-  },
-  {
-    trackName: "Jagannath Sloka",
-    artist: "Unknown",
-    coverImage: "https://i.postimg.cc/k4Ks3k2W/FB-IMG-15070308116375532.jpg",
-    audioSource:
-      "https://github.com/achyutsharan3267/iskconbace/raw/master/src/assets/kirtan/Jagannath%20Sloka%20(%E0%A6%9C%E0%A6%97%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%A5%20%E0%A6%B6%E0%A7%8D%E0%A6%B2%E0%A7%8B%E0%A6%95)%20_%20Sainik%20Dey%20_%20Avik%20Sur%20_%20SVF%20Devotional(MP3_128K).mp3"
-  }
-];
-
-musics.forEach((item, index) => {
-  trackItemsWrapper.innerHTML += `<button class="track-item" data-index="${index}">${
-    index + 1
-  }. ${item.trackName}</button>`;
-});
-
-trackItemsWrapper.firstElementChild.classList.add("active");
-
-function informationUpdate(target) {
-  target = target ? target : 0;
-  coverImage.src = "";
-  coverImage.src = musics[target].coverImage;
-  audioTrack.src = musics[target].audioSource;
-  trackArtistName.textContent = musics[target].artist;
-  trackAlbumName.textContent = musics[target].album;
+// add elemnts
+const bgBody = ["#e5e7e9", "#ff4545", "#f8ded3", "#ffc382", "#f5eda6", "#ffcbdc", "#dcf3f3"];
+const body = document.body;
+const player = document.querySelector(".player");
+const playerHeader = player.querySelector(".player__header");
+const playerControls = player.querySelector(".player__controls");
+const playerPlayList = player.querySelectorAll(".player__song");
+const playerSongs = player.querySelectorAll(".audio");
+const playButton = player.querySelector(".play");
+const nextButton = player.querySelector(".next");
+const backButton = player.querySelector(".back");
+const playlistButton = player.querySelector(".playlist");
+const slider = player.querySelector(".slider");
+const sliderContext = player.querySelector(".slider__context");
+const sliderName = sliderContext.querySelector(".slider__name");
+const sliderTitle = sliderContext.querySelector(".slider__title");
+const sliderContent = slider.querySelector(".slider__content");
+const sliderContentLength = playerPlayList.length - 1;
+const sliderWidth = 100;
+let left = 0;
+let count = 0;
+let song = playerSongs[count];
+let isPlay = false;
+const pauseIcon = playButton.querySelector("img[alt = 'pause-icon']");
+const playIcon = playButton.querySelector("img[alt = 'play-icon']");
+const progres = player.querySelector(".progres");
+const progresFilled = progres.querySelector(".progres__filled");
+let isMove = false;
+// creat functions
+function openPlayer() {
+playerHeader.classList.add("open-header");
+playerControls.classList.add("move");
+slider.classList.add("open-slider");
 }
-
-informationUpdate();
-
-themes.addEventListener("click", (e) => {
-  if (e.target == e.currentTarget) return;
-  let targetTheme = e.target.dataset.theme;
-
-  let activeTheme = document.querySelector(".active-theme");
-  activeTheme.classList.remove("active-theme");
-
-  e.target.classList.add("active-theme");
-
-  switch (targetTheme) {
-    case "theme1":
-      blurElement.style.visibility = "hidden";
-      musicBox.style.border = "";
-      musicBox.style.boxShadow = "";
-      coverImage.style.background = "";
-      trackProgressBar.style.background = "";
-      currentTrackTimeBar.style.background = "";
-      trackLoading.style.background = "";
-      break;
-
-    case "theme2":
-      blurElement.style.visibility = "visible";
-      musicBox.style.border = "1px solid #ffffff12";
-      musicBox.style.boxShadow =
-        "inset -10px -10px 15px #ffffff0a, inset 10px 10px 15px #ffffff0a";
-      blurElement.style.background =
-        "linear-gradient(135deg, #dc143c, #009688)";
-      coverImage.style.background = "#00968875";
-      trackProgressBar.style.background = "#0fd5ca73";
-      currentTrackTimeBar.style.background = "#0fd5ca";
-      trackLoading.style.background = "#0fd5ca";
-      break;
-
-    case "theme3":
-      blurElement.style.visibility = "visible";
-      musicBox.style.border = "1px solid #ffffff12";
-      musicBox.style.boxShadow =
-        "inset -10px -10px 15px #ffffff0a, inset 10px 10px 15px #ffffff0a";
-      blurElement.style.background =
-        "linear-gradient(135deg, #7f0096, #14abdc)";
-      coverImage.style.background = "#288bcf75";
-      trackProgressBar.style.background = "#0fd5ca73";
-      currentTrackTimeBar.style.background = "#0fd5ca";
-      trackLoading.style.background = "#0fd5ca";
-      break;
-  }
-});
-
-trackItemsWrapper.addEventListener("click", (e) => {
-  if (e.target == e.currentTarget) return;
-  let activeAudio = document.querySelector(".active");
-  activeAudio.classList.remove("active");
-  e.target.classList.add("active");
-
-  let targetIndex = e.target.dataset.index;
-
-  informationUpdate(targetIndex);
-});
-
-audioTrack.addEventListener("waiting", waitingEvent);
-
-function waitingEvent() {
-  trackLoading.classList.add("track-loading");
+function closePlayer() {
+playerHeader.classList.remove("open-header");
+playerControls.classList.remove("move");
+slider.classList.remove("open-slider");
 }
-
-audioTrack.addEventListener("canplay", (e) => {
-  trackLoading.classList.remove("track-loading");
-  audioTrack.removeEventListener("waiting", waitingEvent);
-});
-
-let firstPlay = true;
-audioTrack.addEventListener("loadstart", (e) => {
-  audioTrack.addEventListener("waiting", waitingEvent);
-  currentTrackTimeBar.style.width = 0;
-  if (!firstPlay) {
-    audioTrack.play();
-  }
-  firstPlay = false;
-});
-
-let requestAnimationTimeArgument = performance.now();
-
-requestAnimationFrame(function currentTimeUpdater(
-  requestAnimationTimeArgument
-) {
-  let currentTime = audioTrack.currentTime;
-
-  let currentMinute = Math.trunc(currentTime / 60);
-  let currentSeconds = Math.trunc(currentTime % 60);
-
-  if (currentSeconds < 10) {
-    currentSeconds = "0" + currentSeconds;
-  }
-
-  currentTrackTimeNumber.textContent = `${currentMinute}:${currentSeconds}`;
-
-  currentTrackTimeBar.style.width =
-    (currentTime / audioTrack.duration) * 100 + "%";
-
-  requestAnimationFrame(currentTimeUpdater);
-});
-
-audioTrack.addEventListener("canplay", canPlayEvent);
-
-audioTrack.addEventListener("durationchange", canPlayEvent);
-
-function canPlayEvent(e) {
-  let totalTime = audioTrack.duration;
-
-  let totalMinute = Math.trunc(totalTime / 60);
-  let totalSeconds = Math.trunc(totalTime % 60);
-
-  if (totalSeconds < 10) {
-    totalSeconds = "0" + totalSeconds;
-  }
-
-  currentTrackDuration.textContent = `${totalMinute}:${totalSeconds}`;
+function next(index) {
+count = index || count;
+if (count == sliderContentLength) {
+count = count;
+return;
 }
-
-trackProgressBar.addEventListener("pointerdown", (e) => {
-  audioTrack.currentTime =
-    ((e.offsetX / trackProgressBar.offsetWidth) * 100 * audioTrack.duration) /
-    100;
-  trackProgressBar.addEventListener("pointermove", trackProgressBarPointerMove);
-  function trackProgressBarPointerMove(e) {
-    audioTrack.currentTime =
-      ((e.offsetX / trackProgressBar.offsetWidth) * 100 * audioTrack.duration) /
-      100;
-  }
-  document.addEventListener("pointerup", (e) => {
-    trackProgressBar.removeEventListener(
-      "pointermove",
-      trackProgressBarPointerMove
-    );
-  });
-});
-
-trackProgressBar.addEventListener("wheel", (e) => {
-  if (e.deltaY < 0) {
-    audioTrack.currentTime += 5;
-  }
-  if (e.deltaY > 0) {
-    audioTrack.currentTime -= 5;
-  }
-});
-
-playButton.addEventListener("click", (e) => {
-  if (audioTrack.paused) {
-    audioTrack.play();
-  } else {
-    audioTrack.pause();
-  }
-});
-
-previousButton.addEventListener("click", (e) => {
-  let activeAudio = document.querySelector(".active");
-
-  let trackItems = document.querySelectorAll(".track-item");
-
-  let activeIndex =
-    +activeAudio.dataset.index == 0
-      ? trackItems.length
-      : +activeAudio.dataset.index;
-
-  let targetIndex = +activeIndex - 1;
-
-  activeAudio.classList.remove("active");
-  trackItems[targetIndex].classList.add("active");
-
-  informationUpdate(targetIndex);
-});
-
-nextButton.addEventListener("click", (e) => {
-  let activeAudio = document.querySelector(".active");
-
-  let trackItems = document.querySelectorAll(".track-item");
-
-  let activeIndex =
-    +activeAudio.dataset.index == trackItems.length - 1
-      ? -1
-      : +activeAudio.dataset.index;
-
-  let targetIndex = +activeIndex + 1;
-
-  activeAudio.classList.remove("active");
-  trackItems[targetIndex].classList.add("active");
-
-  informationUpdate(targetIndex);
-});
-
-audioTrack.addEventListener("play", (e) => {
-  playButtonIcon.style.opacity = 0;
-  pauseButtonIcon.style.opacity = 1;
-  if (wasPlaying) {
-    wasPlaying = false;
-  }
-});
-
-// prevent from nested animations
-let firstTimeAnimation = true;
-audioTrack.addEventListener("playing", (e) => {
-  if (firstTimeAnimation) {
-    blurElement.animate(
-      { filter: "blur(30px)" },
-      {
-        duration: 5000,
-        easing: "ease-in-out",
-        direction: "alternate",
-        iterations: Infinity
-      }
-    );
-    firstTimeAnimation = false;
-  }
-});
-
-audioTrack.addEventListener("pause", (e) => {
-  playButtonIcon.style.opacity = 1;
-  pauseButtonIcon.style.opacity = 0;
-
-  blurElement.animate(
-    { filter: "blur(10px)" },
-    {
-      duration: 1000,
-      easing: "linear",
-      fill: "forwards"
-    }
-  );
-
-  firstTimeAnimation = true;
-});
-
-volumeWrapper.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault();
-    switch (true) {
-      case e.deltaY < 0:
-        audioTrack.volume = (audioTrack.volume += 0.05).toFixed(2);
-        break;
-
-      case e.deltaY > 0:
-        audioTrack.volume = (audioTrack.volume -= 0.05).toFixed(2);
-        break;
-    }
-    volumeNumberUpdate();
-  },
-  { passive: false }
-);
-
-function volumeNumberUpdate() {
-  // trunc is just for (0.55 * 100)!
-  volumeNumber.textContent = Math.trunc(audioTrack.volume * 100);
+left = (count + 1) * sliderWidth;
+left = Math.min(left, (sliderContentLength) * sliderWidth);
+sliderContent.style.transform = `translate3d(-${left}%, 0, 0)`;
+count++;
+run();
 }
-
-let wasPlaying;
-audioTrack.addEventListener("volumechange", (e) => {
-  let currentVolume = audioTrack.volume;
-  switch (true) {
-    case 0.66 < currentVolume:
-      highVolumeSymbol.style.fill = "white";
-      mediumVolumeSymbol.style.fill = "white";
-      lowVolumeSymbol.style.fill = "white";
-      wavesVolumeButton.style.opacity = 1;
-      volumeCross.style.opacity = 0;
-      if (wasPlaying) {
-        audioTrack.play();
-        wasPlaying = false;
-      }
-      break;
-
-    case 0.33 < currentVolume && currentVolume < 0.66:
-      highVolumeSymbol.style.fill = "#808080";
-      mediumVolumeSymbol.style.fill = "white";
-      lowVolumeSymbol.style.fill = "white";
-      wavesVolumeButton.style.opacity = 1;
-      volumeCross.style.opacity = 0;
-      if (wasPlaying) {
-        audioTrack.play();
-        wasPlaying = false;
-      }
-      break;
-
-    case 0 < currentVolume && currentVolume < 0.33:
-      highVolumeSymbol.style.fill = "#808080";
-      mediumVolumeSymbol.style.fill = "#808080";
-      lowVolumeSymbol.style.fill = "white";
-      wavesVolumeButton.style.opacity = 1;
-      volumeCross.style.opacity = 0;
-      if (wasPlaying) {
-        audioTrack.play();
-        wasPlaying = false;
-      }
-      break;
-
-    case currentVolume == 0:
-      wavesVolumeButton.style.opacity = 0;
-      volumeCross.style.opacity = 1;
-      if (!audioTrack.paused) {
-        wasPlaying = true;
-        audioTrack.pause();
-      }
-      break;
-  }
-
-  volumeNumberUpdate();
+function back(index) {
+count = index || count;
+if (count == 0) {
+count = count;
+return;
+}
+left = (count - 1) * sliderWidth;
+left = Math.max(0, left);
+sliderContent.style.transform = `translate3d(-${left}%, 0, 0)`;
+count--;
+run();
+}
+function changeSliderContext() {
+sliderContext.style.animationName = "opacity";
+sliderName.textContent = playerPlayList[count].querySelector(".player__title").textContent;
+sliderTitle.textContent = playerPlayList[count].querySelector(".player__song-name").textContent;
+if (sliderName.textContent.length > 16) {
+const textWrap = document.createElement("span");
+textWrap.className = "text-wrap";
+textWrap.innerHTML = sliderName.textContent + " " + sliderName.textContent;
+sliderName.innerHTML = "";
+sliderName.append(textWrap);
+}
+if (sliderTitle.textContent.length >= 18) {
+const textWrap = document.createElement("span");
+textWrap.className = "text-wrap";
+textWrap.innerHTML = sliderTitle.textContent + " " + sliderTitle.textContent;
+sliderTitle.innerHTML = "";
+sliderTitle.append(textWrap);
+}
+}
+function changeBgBody() {
+body.style.backgroundColor = bgBody[count];
+}
+function selectSong() {
+song = playerSongs[count];
+for (const item of playerSongs) {
+if (item != song) {
+item.pause();
+item.currentTime = 0;
+}
+}
+if (isPlay) song.play();
+}
+function run() {
+changeSliderContext();
+changeBgBody();
+selectSong();
+}
+function playSong() {
+if (song.paused) {
+song.play();
+playIcon.style.display = "none";
+pauseIcon.style.display = "block";
+}else{
+song.pause();
+isPlay = false;
+playIcon.style.display = "";
+pauseIcon.style.display = "";
+}
+}
+function progresUpdate() {
+const progresFilledWidth = (this.currentTime / this.duration) * 100 + "%";
+progresFilled.style.width = progresFilledWidth;
+if (isPlay && this.duration == this.currentTime) {
+next();
+}
+if (count == sliderContentLength && song.currentTime == song.duration) {
+playIcon.style.display = "block";
+pauseIcon.style.display = "";
+isPlay = false;
+}
+}
+function scurb(e) {
+// If we use e.offsetX, we have trouble setting the song time, when the mousemove is running
+const currentTime = ( (e.clientX - progres.getBoundingClientRect().left) / progres.offsetWidth ) * song.duration;
+song.currentTime = currentTime;
+}
+function durationSongs() {
+let min = parseInt(this.duration / 60);
+if (min < 10) min = "0" + min;
+let sec = parseInt(this.duration % 60);
+if (sec < 10) sec = "0" + sec;
+const playerSongTime = `${min}:${sec}`;
+this.closest(".player__song").querySelector(".player__song-time").append(playerSongTime);
+}
+changeSliderContext();
+// add events
+sliderContext.addEventListener("click", openPlayer);
+sliderContext.addEventListener("animationend", () => sliderContext.style.animationName ='');
+playlistButton.addEventListener("click", closePlayer);
+nextButton.addEventListener("click", () => {
+next(0)
 });
-
-document.addEventListener("keydown", (e) => {
-  switch (e.code) {
-    case "ArrowDown":
-      audioTrack.volume = (audioTrack.volume -= 0.05).toFixed(2);
-      break;
-
-    case "ArrowUp":
-      audioTrack.volume = (audioTrack.volume += 0.05).toFixed(2);
-      break;
-
-    case "ArrowLeft":
-      audioTrack.currentTime -= 5;
-      break;
-
-    case "ArrowRight":
-      audioTrack.currentTime += 5;
-      break;
-
-    case "Space":
-      if (audioTrack.paused) {
-        audioTrack.play();
-      } else {
-        audioTrack.pause();
-      }
-      break;
-  }
-
-  if (e.code == "ArrowDown" || e.code == "ArrowUp") {
-    volumeButton.style.opacity = 0;
-    volumeNumber.style.opacity = 1;
-
-    document.addEventListener("keyup", (e) => {
-      let volumeChangeAnimation = setTimeout(() => {
-        volumeButton.style.opacity = 1;
-        volumeNumber.style.opacity = 0;
-      }, 600);
-
-      document.addEventListener("keydown", (e) => {
-        if (e.code == "ArrowDown" || e.code == "ArrowUp") {
-          clearTimeout(volumeChangeAnimation);
-        }
-      });
-    });
-  }
+backButton.addEventListener("click", () => {
+back(0)
 });
-
-coverImage.addEventListener("pointerdown", (e) => {
-  e.preventDefault();
-  let coverImageBigSize = coverImage.cloneNode();
-  coverImageBigSize.className = "cover-image-big-size";
-  coverImageBigSize.removeAttribute("id");
-  document.body.append(coverImageBigSize);
-
-  document.addEventListener("pointerup", (e) => {
-    coverImageBigSize.remove();
-  });
+playButton.addEventListener("click", () => {
+isPlay = true;
+playSong();
 });
-
+playerSongs.forEach(song => {
+song.addEventListener("loadeddata" , durationSongs);
+song.addEventListener("timeupdate" , progresUpdate);
+});
+progres.addEventListener("pointerdown", (e) => {
+scurb(e);
+isMove = true;
+});
+document.addEventListener("pointermove", (e) => {
+if (isMove) {
+scurb(e);
+song.muted = true;
+}
+});
+document.addEventListener("pointerup", () => {
+isMove = false;
+song.muted = false;
+});
+playerPlayList.forEach((item, index) => {
+item.addEventListener("click", function() {
+if (index > count) {
+next(index - 1);
+return;
+}
+if (index < count) {
+back(index + 1);
+return;
+}
+});
+});
 }

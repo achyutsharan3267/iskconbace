@@ -116,10 +116,14 @@ strong {
   font-weight: 300;
   margin-top: 5px;
 }
+body {
+  background-color: transparent !important;
+}
 
 body.dark {
   background: url(../src/assets/img/background.svg) repeat;
   background-size: unset;
+  background-color: transparent !important;
   p {
     color: var(--black);
   }
@@ -140,6 +144,12 @@ body.dark {
     span {
       color: var(--black) !important;
     }
+  }
+  .player__header {
+    background-color: #096b70;
+  }
+  .player {
+    background: linear-gradient(376deg, #7b0303, #131010);
   }
 }
 .checkbox {
@@ -222,6 +232,18 @@ button.track-item {
   &:hover {
     transform: scale(1.1);
     color: #0fd5ca;
+  }
+}
+
+.slider__title,
+.slider__name {
+  .text-wrap {
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 /* Importing Bootstrap SCSS file. */
