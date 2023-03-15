@@ -1,4 +1,4 @@
-<section class="guruparampara">
+<!-- <section class="guruparampara">
 
 
   <h1>Brahma Madhva Gaudiya Sampradaya <span>Acaryas</span></h1>
@@ -6,17 +6,6 @@
     <img src="https://www.pngall.com/wp-content/uploads/2016/06/Radha-Krishna-PNG-Clipart.png" alt="">
   </div>
   <div class="container">
-
-    <!-- <div class="timeline-block timeline-block-right">
-    <div class="marker"></div>
-    <div class="timeline-content" data-aos="fade-left">
-      <h3> <span class="count">1</span>First</h3>
-      <span>Some work experience</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-    </div>
-  </div> -->
 
     <div class="timeline-block timeline-block-left">
       <div class="marker" data-aos="fade-down"></div>
@@ -404,5 +393,62 @@
     </div>
 
 
+  </div>
+</section> -->
+
+
+
+<section class="guruparampara">
+  <div class="container">
+
+    <div class="krishna circle text-center d-flex">
+      <img src="https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg" alt="">
+      <strong>krishna</strong>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="brahmasampradaya">
+        <div class="row_one d-flex justify-content-between" *ngFor="let item of brahmasampradaya">
+
+          <div class="circle text-center d-flex">
+            <img src="{{item.GuruImage}}" alt="">
+            <strong>{{item.GuruName}}</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="Rudrasampradaya">
+        <div class="row_one d-flex justify-content-between" *ngFor="let item of brahma">
+
+          <div class="circle text-center d-flex">
+            <img src="{{item.GuruImage}}" alt="">
+            <strong>{{item.GuruName}}</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="Srisampradaya">
+        <div class="row_one d-flex justify-content-between" *ngFor="let item of brahma">
+
+          <div class="circle text-center d-flex">
+            <img src="{{item.GuruImage}}" alt="">
+            <strong>{{item.GuruName}}</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="Kumarsampradaya">
+        <div class="row_one d-flex justify-content-between" *ngFor="let item of brahma">
+
+          <div class="circle text-center d-flex">
+            <img src="{{item.GuruImage}}" alt="">
+            <strong>{{item.GuruName}}</strong>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </section>
