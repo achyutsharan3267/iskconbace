@@ -12,34 +12,140 @@ export class GuruParamparaComponent {
   brahmasampradaya = [
     {
       GuruName: 'Brahma',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
     },
+    {
+      GuruName: 'Narada',
+    },
+    {
+      GuruName: 'Vyasa',
+    },
+    {
+      GuruName: 'Madhva',
+    },
+    {
+      GuruName: 'Padmanabha',
+    },
+    {
+      GuruName: 'Narahari',
+    },
+    {
+      GuruName: 'Madhava',
+    },
+    {
+      GuruName: 'Akshobhya',
+    },
+    {
+      GuruName: 'Jaya Tirtha',
+    },
+    {
+      GuruName: 'Jnanasindhu',
+    },
+    {
+      GuruName: 'Dayanidhi',
+    },
+    {
+      GuruName: 'Vidyanidhi',
+    },
+    {
+      GuruName: 'Rajendra',
+    },
+    {
+      GuruName: 'Jayadharma',
+    },
+    {
+      GuruName: 'Purusottama',
+    },
+    {
+      GuruName: 'Brahmanya Tirtha',
+    },
+    {
+      GuruName: 'Vyasa Tirtha',
+    },
+    {
+      GuruName: 'Lakshmipati',
+    },
+    {
+      GuruName: 'Madhavendra Puri',
+    },
+    {
+      GuruName: 'Ishvara Puri, (Nityananda, Advaita)',
+    },
+    {
+      GuruName: 'Lord Chaitanya',
+    },
+    {
+      GuruName: 'Rupa Goswami, (Svarupa, Sanatana Goswami)',
+    },
+    {
+      GuruName: 'Raghunatha, Jiva Goswami',
+    },
+    {
+      GuruName: 'Krishnadasa',
+    },
+    {
+      GuruName: 'Narottama',
+    },
+    {
+      GuruName: 'Vishvanatha',
+    },
+    {
+      GuruName:
+        'Srila Jagannatha Dasa Babaji Maharaja,(Srila Baladeva Vidyabhushana)',
+    },
+    {
+      GuruName: 'Srila Bhaktivinoda Thakura',
+    },
+    {
+      GuruName: 'Srila Gaurakishora Dasa Babaji Maharaja',
+    },
+    {
+      GuruName: 'Srila Bhaktisiddhanta Sarasvati Thakura',
+    },
+    {
+      GuruName: 'AC Bhaktivedanta Swami Prabhupada',
+    },
+  ];
+  rudrasampradaya = [
     {
       GuruName: 'Shiva',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
     },
+    {
+      GuruName: 'Rudra',
+    },
+    {
+      GuruName: 'Visnu Swami',
+    },
+  ];
+  srisampradaya = [
     {
       GuruName: 'Narayana',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
     },
     {
-      GuruName: 'Vsihnu',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
+      GuruName: 'Sri (Laksmi Devi)',
+    },
+    {
+      GuruName: 'Nahtamuni',
+    },
+    {
+      GuruName: 'Yamunacarya',
+    },
+    {
+      GuruName: 'Ramanuja',
     },
   ];
 
-  brahma = [
+  kumarsampradaya = [
     {
-      GuruName: 'Brahma',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
+      GuruName: 'Vishnu',
     },
     {
-      GuruName: 'Shiva',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
+      GuruName: 'Hamsavatar',
     },
     {
-      GuruName: 'Narayana',
-      GuruImage: 'https://wallpapers.com/images/featured/opvqvid74jpkwi9n.jpg',
+      GuruName: 'Sanaka Kumar',
+    },
+    {
+      GuruName: 'Nimbaditya',
     },
   ];
 }

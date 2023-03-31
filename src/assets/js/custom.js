@@ -56,9 +56,9 @@ function animation() {
 
 
 function animationparampara() {
-  AOS.init({
-    duration: 1000,
-    offset: 450
+  $(".department").click(function(){
+    $(this).siblings().children('.sections').slideUp();
+    $(this).children('.sections').slideToggle();
   });
 }
 
