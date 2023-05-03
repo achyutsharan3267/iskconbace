@@ -7,7 +7,8 @@
     <div class="activites-wapper">
       <div class="activites_parent d-md-flex justify-content-between">
 
-        <div class="activites_1 column" data-aos="fade-right">
+        <div class="activites_1 column" data-aos="fade-right" (click)="gotoTop()"
+        [routerLink]="['Photogallery']">
           <div class="about-darshna">
             <h4>dharshan</h4>
             <div class="anim">
@@ -20,7 +21,7 @@
           <img src="../../../assets/img/dharshan.jpg" alt="">
         </div>
         <div class="activites_2 column" data-aos="fade-down">
-          <div class="about-darshna">
+          <div class="about-darshna" (click)="gotoTop()" [routerLink]="['Kirtan']">
             <h4>Kritan</h4>
             <div class="anim">
               <p>Kirtan, a form of devotional call-and-response chanting popularized in India five hundred years ago
@@ -30,7 +31,7 @@
           </div>
           <img src="../../../assets/img/kirtan.jpg" alt="">
         </div>
-        <div class="activites_3 column" data-aos="fade-up">
+        <div class="activites_3 column" data-aos="fade-up" (click)="gotoTop()" [routerLink]="['Prasadam']">
           <div class="about-darshna">
             <h4>Prasadam</h4>
             <div class="anim">

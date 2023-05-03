@@ -9,4 +9,10 @@ export class ActivitiesComponent {
   ngOnInit(): void {
     animation();
   }
+  gotoTop() {
+    var scrollToTop = setTimeout(() => {
+      window.scrollTo(0, 0);
+      clearTimeout(scrollToTop);
+    });
+  }
 }

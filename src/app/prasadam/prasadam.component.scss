@@ -1,0 +1,41 @@
+.prasadam{
+
+    p{
+        text-align: justify;
+    }
+}
+h5 {
+    font-family: Inter,sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 31px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--gradint-1);
+}
+.prasadam_img{
+    margin-bottom: 20px;
+    img{
+        width: 100%;
+        // opacity: 0.6;
+        
+    }
+}
+.bace-prasadam{
+    .prasadam_img {
+    flex: 0 0 calc(50% - 20px);
+    img{
+        max-height: 250px;
+    object-fit: cover;
+    }
+    span{
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+}
+.bace-prasadam{
+   p {flex: 0 0 calc(50% - 20px);}
+}

@@ -26,6 +26,7 @@ import { PrabhupadRoomComponent } from './VrindavanDarshan/prabhupad-room/prabhu
 import { RoopGoswamiComponent } from './VrindavanDarshan/roop-goswami/roop-goswami.component';
 import { KirtanComponent } from './kirtan/kirtan.component';
 import { SixGoswamisComponent } from './content/six-goswamis/six-goswamis.component';
+import { PrasadamComponent } from './prasadam/prasadam.component';
 
 const routes: Routes = [
   { path: '', component: HeroCarusalComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
   { path: 'PrabhupadRoom', component: PrabhupadRoomComponent },
   { path: 'RoopGoswami', component: RoopGoswamiComponent },
   { path: 'Kirtan', component: KirtanComponent },
-  {path: 'SixGoswamis',component:SixGoswamisComponent}
+  {path: 'SixGoswamis',component:SixGoswamisComponent},
+  {path: 'Prasadam',component:PrasadamComponent}
 ];
 @NgModule({
   declarations: [
@@ -68,6 +70,7 @@ const routes: Routes = [
     RoopGoswamiComponent,
     KirtanComponent,
     SixGoswamisComponent,
+    PrasadamComponent,
   ],
   imports: [
     BrowserModule,
