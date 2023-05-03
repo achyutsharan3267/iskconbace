@@ -56,10 +56,9 @@ function animation() {
 
 
 function animationparampara() {
-  $(".department").click(function(){
-    $(this).siblings().children('.sections').slideUp();
-    $(this).children('.sections').slideToggle();
-  });
+  $(window).load(function(){        
+    $('#myModal').modal('show');
+     }); 
 }
 
 function sks() {

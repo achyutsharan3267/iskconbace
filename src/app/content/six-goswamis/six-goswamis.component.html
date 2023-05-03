@@ -1,0 +1,46 @@
+<div class="six-goswamis">
+
+<div class="container">
+
+<h1>Six Goswamis of Vrindavan</h1>
+
+<div class="main-wapper">
+<div class="gowamis-wapper d-md-flex" *ngFor="let item of goswamis">
+    <div class="img">
+        <figure>
+            <img src="{{item.goswamisImage}}" alt="">
+        </figure>
+    </div>
+    <div class="about-goswami">
+        <p><strong>{{item.goswamisName}}</strong>{{item.aboutOne}}</p>
+        <p>{{item.aboutTwo}}</p>
+        <p>{{item.aboutThree}}</p>
+        <p>{{item.aboutFour}}</p>
+    </div>
+</div>
+    
+</div>
+</div>
+
+
+</div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
