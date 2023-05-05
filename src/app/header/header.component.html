@@ -52,7 +52,7 @@
             <li class="list_item">
               <a href="javascript:void();" [routerLink]="['Yamuna']" (click)="gotoTop()">Yamuna Aarti</a>
             </li>
-           
+
             <li class="list_item">
               <a href="javascript:void();" [routerLink]="['Govardhan']" (click)="gotoTop()">Govardhan</a>
             </li>
@@ -66,14 +66,14 @@
             <li class="list_item">
               <a href="javascript:void();">Sanatana Goswami Samadhi</a>
             </li>
-        
+
             <li class="list_item">
               <a href="javascript:void();">25 Lilasthalis</a>
             </li>
-            <li class="list_item">
+            <!-- <li class="list_item">
               <a href="javascript:void();" [routerLink]="['GuruParampara']" (click)="gotoTop()">Guru Parampara</a>
-            </li>
-           
+            </li> -->
+
           </ul>
         </a>
 
@@ -85,11 +85,12 @@
           </svg>
           <ul class="list">
             <li class="list_item"><a href="javascript:void();" (click)="gotoTop()"
-              [routerLink]="['Photogallery']">Gallery</a></li>
-              <li class="list_item"><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Kirtan']">Kirtan</a>
-              </li>
-              <li class="list_item"><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Lectures']">Lectures</a>
-              </li>
+                [routerLink]="['Photogallery']">Gallery</a></li>
+            <li class="list_item"><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Kirtan']">Kirtan</a>
+            </li>
+            <li class="list_item"><a href="javascript:void();" (click)="gotoTop()"
+                [routerLink]="['Lectures']">Lectures</a>
+            </li>
           </ul>
         </a>
         <a class="nav-item nav-link" href="javascript:void();">Contact Us</a>
@@ -129,6 +130,9 @@
                   <li> <a [routerLink]="['AboutParbhupad']" (click)="gotoTop()">About Srila Prabhupada</a></li>
                   <li> <a [routerLink]="['AboutGopalKrishna']" (click)="gotoTop()">About Gopal Krishna Goswami
                       Maharaja</a></li>
+                      <li>
+                        <a href="javascript:void();" [routerLink]="['SixGoswamis']" (click)="gotoTop()">Six Goswamis</a>
+                      </li>
                 </ul>
 
               </div>
@@ -145,21 +149,35 @@
                   <li> <a href="javascript:void();" [routerLink]="['TempleOfVrindavan']" (click)="gotoTop()">7 Temples
                       Of Vrindavan</a></li>
                   <li><a href="javascript:void();" [routerLink]="['Yamuna']" (click)="gotoTop()">Yamuna Aarti</a></li>
-                  <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Photogallery']">Gallery</a></li>
+                
                   <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['PrabhupadRoom']">Srila Prabhupada
                       Room</a></li>
                   <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['RoopGoswami']">Rupa Goswami
                       Samadhi</a></li>
                   <li><a href="javascript:void();" (click)="gotoTop()">Sanatana Goswami Samadhi</a></li>
                   <li><a href="javascript:void();" (click)="gotoTop()">25 Lilasthalis</a></li>
-                  <li><a href="javascript:void();" [routerLink]="['GuruParampara']" (click)="gotoTop()">Guru
-                      Parampara</a></li>
-                  <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Kirtan']">Kirtan</a></li>
-                  <li>
-                    <a href="javascript:void();" [routerLink]="['SixGoswamis']" (click)="gotoTop()">Six Goswamis</a>
-                  </li>
+                  <!-- <li><a href="javascript:void();" [routerLink]="['GuruParampara']" (click)="gotoTop()">Guru
+                      Parampara</a></li> -->
+                 
+                 
                 </ul>
 
+              </div>
+            </div>
+          </li>
+
+          <li><a href="javascript:void();">Gallery</a>
+            <div class="megamenu-panel">
+              <div class="megamenu-lists">
+                <ul class="megamenu-list list-col-4">
+                  <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Photogallery']">Daily Darshan</a></li>
+                  <li><a href="javascript:void();" (click)="gotoTop()" [routerLink]="['Kirtan']">Kirtan</a></li>
+                  <li>
+                    <a href="javascript:void();" (click)="gotoTop()"
+                [routerLink]="['Lectures']">Lectures</a>
+                  </li>
+                </ul>
+          
               </div>
             </div>
           </li>
@@ -189,3 +207,24 @@
   <strong>Goto Top</strong>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
