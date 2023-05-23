@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="form-container">
+      <div class="left-container">
+        <div class="left-inner-container">
+        <h2>Let's Chat</h2>
+        <p>Whether you have a question, want to start a project or            simply want to connect.</p>
+          <br>
+          <p>Feel free to send me a message in the contact form</p>
+      </div>
+        </div>
+      <div class="right-container">
+        <div class="right-inner-container">
+          <form action="https://sheetdb.io/api/v1/3rlkldo775vav" method="post" id="sheetdb-form">
+              <h2 class="lg-view">Contact</h2>
+        <h2 class="sm-view">Let's Chat</h2>
+             <p>* Required</p>
+              <div class="social-container">
+                  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            <input type="text" placeholder="First Name"  name="data[First-Name]" required="" autocomplete="off"/>
+            <input type="text" placeholder="Last Name" name="data[Last-Name]" required="" autocomplete="off"/>
+            <input type="email" placeholder="Email" name="data[Email]" autocomplete="off" />
+              <input type="tel" placeholder="Mobile" name="data[Mobile]" required="" autocomplete="off"/>
+              <input type="tel"placeholder="Whatsapp Contect" name="data[WhatsappContect]" autocomplete="off">
+              <div class="FeedBack">
+                <input type="text" placeholder="Place" name="data[Place]">
+              </div>
+              <div class="radio-wapper">      
+                <div class="wrapperradio d-flex">
+                  <input type="radio" name="data[gender]" id="option-1" checked="" value="Prabhu Ji">
+                  <input type="radio" name="data[gender]" id="option-2" value="Mata Ji">
+                  <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Prabhu Ji</span>
+                  </label>
+                  <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>Mataji</span>
+                  </label>
+                </div>
+              </div>
+            <textarea rows="4" placeholder="Place" name="data[message]"></textarea>
+              <button >Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  <script>
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+        response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        window.open('https://iskconbace.netlify.app');
+
+      });
+    });
+
+
+
+    let translate = document.getElementsByClassName(".VIpgJd-ZVi9od-ORHb ")
+    console.log(translate)
+  </script>
