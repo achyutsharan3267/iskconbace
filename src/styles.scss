@@ -491,7 +491,7 @@ button {
 .menu {
   position: relative;
   z-index: 99;
-  background: url(..//../assets/img/background.svg) repeat;
+  background: url(../src/assets/img/background.svg) repeat;
 }
 
 .menu-bar li:first-child .dropdown {
@@ -550,7 +550,7 @@ button {
   transition: all 0.5s ease-in-out;
   box-shadow: var(--shadow);
   height: 100vh;
-  background: url(..//../assets/img/background.svg) repeat;
+  background: url(../src/assets/img/background.svg) repeat;
 }
 
 .dropdown.active {
