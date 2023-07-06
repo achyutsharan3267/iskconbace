@@ -1,5 +1,7 @@
 .banner {
   position: relative;
+  overflow: hidden;
+  height: 80vh;
 }
 .overlay {
   width: 100%;
@@ -17,8 +19,18 @@
   img {
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: -460px 0;
+    height: 100%;
+    transform: scale(2);
+    animation-name: example;
+  animation-duration: 10s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
   }
+}
+@keyframes example {
+  from {transform: scale(2);}
+  to {transform: scale(1);}
 }
 .slide {
   img {
@@ -39,6 +51,13 @@
       line-height: 30px;
       font-weight: 600;
       padding: 10px 0px 10px;
+    }
+  }
+}
+@media screen and (min-width:768px){
+  .banner {
+    img {
+      object-position: center;
     }
   }
 }
