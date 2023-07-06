@@ -11,7 +11,7 @@ header {
   height: 75px;
 }
 .navbar {
-  padding: 0 30px;
+  padding: 10px;
   background: linear-gradient(
     90deg,
     var(--gradint-1) 0%,
@@ -48,7 +48,7 @@ header {
   color: var(--white);
   text-transform: uppercase;
   position: relative;
-  padding: 30px;
+  // padding: 30px;
 
   &:hover {
     color: var(--btn-hover);
@@ -65,7 +65,7 @@ header {
   background: var(--white);
   width: 300px;
   position: absolute;
-  top: 75px;
+  top: 63px;
   left: -50px;
   display: none;
   z-index: 9;

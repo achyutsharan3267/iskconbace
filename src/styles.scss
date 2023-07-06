@@ -5,12 +5,10 @@
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss";
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss";
 body {
-  background: url(../src/assets/img/background.png) top left no-repeat;
+  background: url(../src/assets/img/background.svg) repeat;
   font-family: "Roboto", sans-serif;
-  background-size: cover;
-  p {
-    color: var(--white);
-  }
+  // background-size: cover;
+
 }
 :root {
   --gradint-1: #096b70;
@@ -19,7 +17,7 @@ body {
   --btn-color: #ffda6b;
   --text: #3a4f66;
   --head: #7e8446;
-  --white: #fff;
+  --white: #ffffff;
   --black: #000;
   --custom: #c3bfbf;
 }
