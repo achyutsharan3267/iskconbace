@@ -1,6 +1,97 @@
 .address {
   padding: 200px 0;
 }
+
 .map_address {
   width: 100%;
+}
+
+.head {
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 60px;
+    text-align: center;
+    color: var(--head);
+  }
+}
+
+.resent_images {
+  margin-bottom: 100px;
+}
+
+.imgae-wapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+
+  a {
+    flex: 0 0 calc(50% - 10px);
+    height: 100%;
+    margin: 5px;
+    height: 150px;
+    transition: all 0.5s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  line-height: 1;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+
+  span {
+    position: absolute;
+    color: #fff;
+  }
+}
+
+.more::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imgae-wapper .more:hover:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width:992px) {
+  .head{   h3 {
+    font-size: 100px;
+    line-height: 117px;
+    margin-bottom: 50px;
+} }
+.imgae-wapper {
+  a {
+    flex: 0 0 calc(20% - 10px);
+    height: 200px;
+
+  }
+}
 }
