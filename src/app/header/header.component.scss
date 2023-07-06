@@ -14,112 +14,31 @@ header {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {}
+ .gototop {
+   position: fixed;
+   bottom: 80px;
+   right: 40px;
+   z-index: 9999;
+   width: 20px;
+   height: 20px;
+    background: rgba(0, 0, 0, 0.8);
+   font-size: 25px;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   line-height: 30px;
+   cursor: pointer;
 
-.main_header_area {
-  height: 75px;
-}
-
-.nav-toggle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 2px 0;
-  position: absolute;
-  top: 50%;
-  margin-top: -14px;
-  right: 30px;
-  display: none;
-  cursor: pointer;
-}
-
-.nav-toggle:before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0.5em 0 0 #fff, 0 1em 0 0 #fff;
-}
-
-.navigation-portrait .nav-toggle {
-  display: block;
-}
-
-.nav-menu+.nav-menu>li:first-child {
-  border-top: none;
-}
-
-.nav-menu>li>a {
-  height: 70px;
-  padding: 26px 15px;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 14px;
-  color: #fff;
-  transition: color 0.3s, background 0.3s;
-}
-
-.navigation-portrait .nav-menu>li>a {
-  width: 100%;
-  height: auto;
-  padding: 12px 15px 12px 26px;
-}
-
-.nav-menu>li:hover>a,
-.nav-menu>li.active>a,
-.nav-menu>li.focus>a {
-  background: rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
-
-.megamenu-list {
-  width: 100%;
-  margin: 0 0 15px;
-  padding: 0;
-  display: inline-block;
-  list-style: none;
-}
-
-.megamenu-list>li>a:hover {
-  background: linear-gradient(90deg,
-      var(--gradint-1) 0%,
-      var(--gradint-2) 100%);
-  color: #fff !important;
-}
-
-@media screen and (min-width: 992px) {
-  .visit-btn {
-    margin: unset;
-    width: unset;
-  }
-}
-
-.gototop {
-  position: fixed;
-  bottom: 80px;
-  right: 40px;
-  z-index: 9999;
-  width: 20px;
-  height: 20px;
-  // background: rgba(0, 0, 0, 0.8);
-  font-size: 25px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  line-height: 30px;
-  cursor: pointer;
-
-  // border: 1px solid #fff;
-  strong {
-    display: block;
-    font-size: 10px;
-    line-height: 1;
-    text-align: center;
-  }
-}
+    border: 1px solid #fff;
+   strong {
+     display: block;
+     font-size: 10px;
+     line-height: 1;
+     text-align: center;
+   }
+ }
 
 
 
@@ -262,15 +181,11 @@ button {
   display: flex;
   flex-direction: column;
   min-width: 230px;
-  // background-color: var(--white);
   border-radius: 10px;
   position: absolute;
   top: 36px;
   right: 100vw;
   z-index: 1;
-  // visibility: hidden;
-  // opacity: 0;
-  // transform: scale(0.97) translateX(-5px);
   transition: all 0.5s ease-in-out;
   box-shadow: var(--shadow);
   height: 100vh;
