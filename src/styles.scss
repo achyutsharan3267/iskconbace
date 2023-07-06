@@ -408,51 +408,7 @@ img[alt="pause-icon"] {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* style.css */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-:root {
-  --dark-grey: #333333;
-  --medium-grey: #636363;
-  --light-grey: #eeeeee;
-  --ash: #f4f4f4;
-  --primary-color: #2b72fb;
-  --white: white;
-  --border: 1px solid var(--light-grey);
-  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-
-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: inherit;
-}
+#nav-menu{
 
 .btn {
   display: block;
@@ -491,7 +447,7 @@ button {
 .menu {
   position: relative;
   z-index: 99;
-  background: url(../src/assets/img/background.svg) repeat;
+  background: #ffffff url(../src/assets/img/background.svg) repeat;
 }
 
 .menu-bar li:first-child .dropdown {
@@ -542,15 +498,19 @@ button {
   display: flex;
   flex-direction: column;
   min-width: 230px;
+  // background-color: var(--white);
   border-radius: 10px;
   position: absolute;
   top: 36px;
   right: 100vw;
   z-index: 1;
+  // visibility: hidden;
+  // opacity: 0;
+  // transform: scale(0.97) translateX(-5px);
   transition: all 0.5s ease-in-out;
   box-shadow: var(--shadow);
   height: 100vh;
-  background: url(../src/assets/img/background.svg) repeat;
+  background: #eeeeee url(../src/assets/img/background.svg) repeat;
 }
 
 .dropdown.active {
@@ -599,29 +559,4 @@ button {
   border-radius: 50%;
 }
 
-.search input {
-  background-color: var(--ash);
-  border: none;
-  border-radius: 6px;
-  padding: 0.7rem;
-  padding-left: 2.4rem;
-  font-size: 16px;
-  width: 100%;
-  border: var(--border);
-}
-
-.search .bx-search {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  font-size: 1.3rem;
-  transform: translateY(-50%);
-  opacity: 0.6;
-}
-
-#hamburger {
-  display: none;
-  padding: 0.1rem;
-  margin-left: 1rem;
-  font-size: 1.9rem;
 }
